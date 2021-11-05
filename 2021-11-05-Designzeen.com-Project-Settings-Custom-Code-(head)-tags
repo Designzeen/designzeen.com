@@ -1,0 +1,40 @@
+
+//Dark Mode (head tag)
+
+<style>
+#content.light-mode {
+  background-color: #ffffff;
+  color: #005D71;
+}
+#content.light-mode a {
+  color: #171717;
+}
+#content.light-mode path {
+  fill: #F0F0F0;
+}
+
+#content.dark-mode {
+  background-color: #005D71;
+  color: #ffffff;
+}
+#content.dark-mode a {
+  color: #ffffff;
+}
+#content.dark-mode a.w--current {
+ color: #707AFF;
+}
+  
+#content.dark-mode path {
+  fill: #2f2f2f;
+}
+   
+</style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144748173-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-144748173-3');
+</script>
