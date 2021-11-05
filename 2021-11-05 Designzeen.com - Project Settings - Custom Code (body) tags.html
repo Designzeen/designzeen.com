@@ -1,0 +1,51 @@
+
+//Typed.js (body tag)
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+    <script>
+    	var typed4 = new Typed('.typed-text', {
+        strings: ['mining', 'manufacturing', 'technology', 'services', 'sales', 'investment', 'startup'],
+        typeSpeed: 75,
+        backSpeed: 25,
+        bindInputFocusEvents: true,
+        loop: true,
+        cursorChar: '|',
+        backDelay: 1000,
+        startDelay: 1000
+      });
+    </script> 
+
+
+
+
+//Dark Mode Cookies (body tag)
+
+<script>
+function setThemeFromCookie() {
+	var themeState = document.getElementById('content');
+	themeState.className = isThemeSelected() ? 'dark-mode' : 'light-mode';
+}
+
+function setThemeSwitchState() {
+	document.getElementById('toggleTheme').checked = isThemeSelected();
+}
+
+function isThemeSelected() {
+	return document.cookie.match(/theme=dark/i) != null;
+}
+
+function toggleTheme() {
+	var themeState = document.getElementById('content');
+	var currentState = themeState.className;
+	var newState = themeState.className == 'dark-mode' ? 'light-mode' : 'dark-mode';
+	themeState.className = newState;
+	document.cookie = 'theme=' + (newState == 'light-mode' ? 'light' : 'dark');
+}
+
+(function() {
+	setThemeFromCookie();
+	setThemeSwitchState();
+	document.getElementById('toggleTheme').onchange=toggleTheme;
+})();
+</script>
